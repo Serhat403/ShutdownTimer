@@ -43,8 +43,8 @@
             this.Action = new System.Windows.Forms.GroupBox();
             this.rbSavePower = new System.Windows.Forms.RadioButton();
             this.rbRestart = new System.Windows.Forms.RadioButton();
-            this.rbShutdown = new System.Windows.Forms.RadioButton();
             this.Timer = new System.Windows.Forms.Timer(this.components);
+            this.rbShutdown = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.Action.SuspendLayout();
@@ -156,9 +156,9 @@
             // 
             // Action
             // 
+            this.Action.Controls.Add(this.rbShutdown);
             this.Action.Controls.Add(this.rbSavePower);
             this.Action.Controls.Add(this.rbRestart);
-            this.Action.Controls.Add(this.rbShutdown);
             this.Action.Location = new System.Drawing.Point(450, 13);
             this.Action.Name = "Action";
             this.Action.Size = new System.Drawing.Size(235, 172);
@@ -186,22 +186,21 @@
             this.rbRestart.Text = "Restart";
             this.rbRestart.UseVisualStyleBackColor = true;
             // 
-            // rbShutdown
-            // 
-            this.rbShutdown.AutoSize = true;
-            this.rbShutdown.Enabled = false;
-            this.rbShutdown.Location = new System.Drawing.Point(7, 27);
-            this.rbShutdown.Name = "rbShutdown";
-            this.rbShutdown.Size = new System.Drawing.Size(86, 20);
-            this.rbShutdown.TabIndex = 0;
-            this.rbShutdown.Text = "Shutdown";
-            this.rbShutdown.UseVisualStyleBackColor = true;
-            this.rbShutdown.UseWaitCursor = true;
-            // 
             // Timer
             // 
             this.Timer.Interval = 1000;
             this.Timer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // rbShutdown
+            // 
+            this.rbShutdown.AutoSize = true;
+            this.rbShutdown.Location = new System.Drawing.Point(7, 21);
+            this.rbShutdown.Name = "rbShutdown";
+            this.rbShutdown.Size = new System.Drawing.Size(91, 20);
+            this.rbShutdown.TabIndex = 3;
+            this.rbShutdown.TabStop = true;
+            this.rbShutdown.Text = "Shut Down";
+            this.rbShutdown.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -240,10 +239,10 @@
         private System.Windows.Forms.TextBox txtMinutes;
         private System.Windows.Forms.TextBox txtHours;
         private System.Windows.Forms.GroupBox Action;
-        private System.Windows.Forms.RadioButton rbSavePower;
         private System.Windows.Forms.RadioButton rbRestart;
-        private System.Windows.Forms.RadioButton rbShutdown;
         private System.Windows.Forms.Timer Timer;
+        private System.Windows.Forms.RadioButton rbSavePower;
+        private System.Windows.Forms.RadioButton rbShutdown;
     }
 }
 
